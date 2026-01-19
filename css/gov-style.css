@@ -161,30 +161,27 @@ header nav {
     font-size: 18px;
   }
 }
-/* ==============================
-   Hero Section
-   ============================== */
+/* ===== HERO SECTION – FINAL FIX ===== */
 
 .hero {
-  background: linear-gradient(
-    rgba(11, 60, 93, 0.95),
-    rgba(11, 60, 93, 0.95)
-  );
-  padding: 40px 20px;
-  padding-top: 30px;
-  margin-top: 0;
+  background-color: #0b3c5d;
+  padding: 40px 20px 30px;
   text-align: center;
   color: #ffffff;
 }
 
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
 .hero-content img {
-  height: 90px;
+  height: 80px;
   margin-bottom: 12px;
 }
 
 .hero-content h2 {
-  margin: 10px 0 4px;
+  margin: 6px 0 4px;
   font-size: 26px;
   font-weight: 600;
 }
@@ -194,19 +191,3 @@ header nav {
   font-size: 16px;
   opacity: 0.9;
 }
-
-@media (max-width: 768px) {
-  .hero-content img {
-    height: 70px;
-  }
-
-  .hero-content h2 {
-    font-size: 22px;
-  }
-}
-
-
-
-
-
-
