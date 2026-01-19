@@ -157,6 +157,47 @@ header nav {
     font-size: 18px;
   }
 }
+/* ==============================
+   Hero Section
+   ============================== */
+
+.hero {
+  background: linear-gradient(
+    rgba(11, 60, 93, 0.95),
+    rgba(11, 60, 93, 0.95)
+  );
+  padding: 40px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-content img {
+  height: 90px;
+  margin-bottom: 12px;
+}
+
+.hero-content h2 {
+  margin: 10px 0 4px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.hero-content p {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .hero-content img {
+    height: 70px;
+  }
+
+  .hero-content h2 {
+    font-size: 22px;
+  }
+}
+
 
 
 
