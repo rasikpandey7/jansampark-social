@@ -55,11 +55,10 @@ nav a:hover {
 
 /* Layout */
 .container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 30px;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
 }
-
 /* Card */
 .card {
   background-color: #ffffff;
@@ -164,9 +163,12 @@ header nav {
 /* ===== FINAL HERO SECTION ===== */
 
 .hero {
-  background-color: #0b3c5d;
-  padding: 40px 20px 30px;
-  text-align: center;
+  background: #0b3c5d !important;
+  display: block;
+  width: 100%;
+}
+
+.hero * {
   color: #ffffff;
 }
 
@@ -191,3 +193,18 @@ header nav {
   font-size: 16px;
   opacity: 0.9;
 }
+/* ===== HERO FORCE FIX ===== */
+.hero {
+  background-color: #0b3c5d !important;
+  width: 100%;
+}
+
+.hero-content,
+.hero-content h2,
+.hero-content p {
+  color: #ffffff;
+}
+
+
+
+
