@@ -171,9 +171,12 @@ header nav {
     rgba(11, 60, 93, 0.95)
   );
   padding: 40px 20px;
+  padding-top: 30px;
+  margin-top: 0;
   text-align: center;
   color: #ffffff;
 }
+
 
 .hero-content img {
   height: 90px;
@@ -201,6 +204,7 @@ header nav {
     font-size: 22px;
   }
 }
+
 
 
 
