@@ -1,0 +1,116 @@
+/* ==============================
+   Jansampark MP – Govt UI Theme
+   ============================== */
+
+:root {
+  --mp-blue: #0b3c5d;
+  --mp-saffron: #ff9933;
+  --mp-green: #138808;
+  --light-bg: #f4f6f9;
+  --text-dark: #2c2c2c;
+}
+
+/* Base */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: var(--mp-blue);
+  color: #ffffff;
+  padding: 16px 32px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Navigation */
+nav {
+  margin-top: 8px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 18px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+}
+
+/* Card */
+.card {
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 22px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 20px;
+  border-left: 5px solid var(--mp-saffron);
+  padding-left: 12px;
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* Links */
+a {
+  color: var(--mp-blue);
+}
+
+a:hover {
+  color: var(--mp-green);
+}
+
+/* Footer */
+footer {
+  background-color: #1f2933;
+  color: #cfd8dc;
+  text-align: center;
+  padding: 14px;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    padding: 14px 20px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+}
