@@ -2,28 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Jansampark Social Media Wing | Madhya Pradesh</title>
+  <title>Social Media Wing – Jansampark Madhya Pradesh</title>
 
-  <!-- Govt CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Main Govt CSS -->
   <link rel="stylesheet" href="css/gov-style.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 <header>
-  <!-- HERO SECTION -->
-<section class="hero" style="background:#0b3c5d; color:#fff;">
-  <div class="hero-content">
-    <img src="assets/mp-emblem.png" alt="Government of Madhya Pradesh">
-    <h2>Social Media Wing</h2>
-    <p>Jansampark, Government of Madhya Pradesh</p>
-  </div>
-</section>
-
-<!-- PAGE CONTENT -->
-<div class="container">
   <div class="header-wrap">
+    <img src="assets/mp-emblem.png" alt="Government of Madhya Pradesh">
     <h1 class="header-title">
       Social Media Wing – Jansampark Madhya Pradesh
     </h1>
@@ -35,29 +27,40 @@
     <a href="live.html">Live Events</a>
     <a href="directory.html">Account Directory</a>
     <a href="about.html">About</a>
-      <span style="float:right;">
-  <a href="#" onclick="setLang('en')">EN</a> |
-  <a href="#" onclick="setLang('hi')">HI</a>
-</span>
+
+    <!-- Language Toggle -->
+    <span style="float:right;">
+      <a href="#" onclick="setLang('en')">EN</a> |
+      <a href="#" onclick="setLang('hi')">HI</a>
+    </span>
   </nav>
 </header>
-<!-- HERO SECTION -->
-<section class="hero">
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero" style="background:#0b3c5d; color:#ffffff;">
   <div class="hero-content">
     <img src="assets/mp-emblem.png" alt="Government of Madhya Pradesh">
     <h2>Social Media Wing</h2>
     <p>Jansampark, Government of Madhya Pradesh</p>
   </div>
 </section>
-<!-- MAIN CONTENT -->
+
+<!-- ================= PAGE CONTENT ================= -->
 <div class="container">
 
   <div class="card">
     <h2>Overview</h2>
-    <p>
+
+    <p class="lang-en">
       Social Media Wing, Jansampark Madhya Pradesh is responsible for
-      monitoring, coordination and official digital communication
-      of Government Departments, District Administration and Senior Officers.
+      monitoring, coordination and official digital communication of
+      Government Departments, District Administration and Senior Officers.
+    </p>
+
+    <p class="lang-hi">
+      सोशल मीडिया विंग, जनसंपर्क मध्यप्रदेश
+      शासन के विभागों, जिला प्रशासन एवं वरिष्ठ अधिकारियों
+      की आधिकारिक डिजिटल संचार एवं निगरानी का दायित्व निभाता है।
     </p>
 
     <ul>
@@ -80,29 +83,24 @@
     </ul>
   </div>
 
-  <div class="card">
-    <h2>Quick Access</h2>
-    <p>
-      ➤ Latest updates from Hon’ble Chief Minister<br>
-      ➤ Live Government programs and announcements<br>
-      ➤ Verified social media account directory
-    </p>
-  </div>
-
 </div>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <footer>
-  Official Website of Social Media Wing, Jansampark Madhya Pradesh
+  Official Website of Social Media Wing, Jansampark, Government of Madhya Pradesh
 </footer>
+
+<!-- ================= LANGUAGE TOGGLE SCRIPT ================= -->
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang-en').forEach(el => {
+      el.style.display = (lang === 'en') ? 'block' : 'none';
+    });
+    document.querySelectorAll('.lang-hi').forEach(el => {
+      el.style.display = (lang === 'hi') ? 'block' : 'none';
+    });
+  }
+</script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
