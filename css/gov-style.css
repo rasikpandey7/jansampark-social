@@ -114,3 +114,44 @@ footer {
     padding: 20px;
   }
 }
+/* ==============================
+   Professional Govt Header
+   ============================== */
+
+.header-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header-wrap img {
+  height: 48px;
+}
+
+.header-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Navigation spacing fix */
+header nav {
+  margin-top: 10px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .header-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-wrap img {
+    height: 42px;
+  }
+
+  .header-title {
+    font-size: 18px;
+  }
+}
+
