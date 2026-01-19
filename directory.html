@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Account Directory | Jansampark MP</title>
+
+  <!-- Govt CSS -->
+  <link rel="stylesheet" href="css/gov-style.css">
+
+  <!-- Data File -->
+  <script src="js/data.js"></script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <h1>Official Social Media Account Directory</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="hcm.html">HCM Updates</a>
+    <a href="live.html">Live Events</a>
+    <a href="directory.html">Account Directory</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<!-- CONTENT -->
+<div class="container">
+<!-- SEARCH BOX -->
+<div class="card">
+  <h2>Search Official Accounts</h2>
+  <input
+    type="text"
+    id="searchBox"
+    placeholder="Type department, district or officer name..."
+    style="
+      width:100%;
+      padding:10px;
+      font-size:16px;
+      border:1px solid #ccc;
+      border-radius:4px;
+    "
+  >
+</div>
+
+  <!-- Departments -->
+  <div class="card">
+    <h2>Government Departments</h2>
+    <ul id="deptList"></ul>
+  </div>
+
+  <!-- Districts -->
+  <div class="card">
+    <h2>District Collectors</h2>
+    <ul id="districtList"></ul>
+  </div>
+
+  <!-- Commissioners -->
+  <div class="card">
+    <h2>Commissioners</h2>
+    <ul id="commissionerList"></ul>
+  </div>
+
+  <!-- Joint Directors -->
+  <div class="card">
+    <h2>Joint Directors</h2>
+    <ul id="jdList"></ul>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  Verified & Official Social Media Handles Only | Jansampark MP
+</footer>
+
+<!-- SCRIPT TO RENDER DATA -->
+<script>
+  function renderList(list, elementId) {
+    const el = document.getElementById(elementId);
+    el.innerHTML = "";
+
+    list.forEach(item => {
+      el.innerHTML += `
+        <li>
+          <b>${item.name}</b>
+          ${item.twitter ? ` | <a href="${item.twitter}" target="_blank">Twitter</a>` : ``}
+          ${item.facebook ? ` | <a href="${item.facebook}" target="_blank">Facebook</a>` : ``}
+        </li>`;
+    });
+  }
+
+  // Initial Load
+  renderList(departments, "deptList");
+  renderList(districts, "districtList");
+  renderList(commissioners, "commissionerList");
+  renderList(jointDirectors, "jdList");
+
+  // Search Logic
+  document.getElementById("searchBox").addEventListener("keyup", function () {
+    const query = this.value.toLowerCase();
+
+    renderList(
+      departments.filter(d => d.name.toLowerCase().includes(query)),
+      "deptList"
+    );
+
+    renderList(
+      districts.filter(d => d.name.toLowerCase().includes(query)),
+      "districtList"
+    );
+
+    renderList(
+      commissioners.filter(c => c.name.toLowerCase().includes(query)),
+      "commissionerList"
+    );
+
+    renderList(
+      jointDirectors.filter(j => j.name.toLowerCase().includes(query)),
+      "jdList"
+    );
+  });
+</script>
+
+</body>
+</html>
