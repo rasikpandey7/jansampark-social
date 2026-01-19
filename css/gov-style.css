@@ -23,7 +23,7 @@ body {
 header {
   background-color: var(--mp-blue);
   color: #ffffff;
-  padding: 16px 32px;
+  padding: 12px 28px;
 }
 
 header h1 {
@@ -143,10 +143,11 @@ header nav {
 
 /* Mobile responsive */
 @media (max-width: 768px) {
-  .header-wrap {
-    flex-direction: column;
-    align-items: flex-start;
+  .header-wrap img {
+    height: 36px;
   }
+}
+
 
   .header-wrap img {
     height: 42px;
@@ -156,5 +157,6 @@ header nav {
     font-size: 18px;
   }
 }
+
 
 
