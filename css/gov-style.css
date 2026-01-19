@@ -125,7 +125,9 @@ footer {
 }
 
 .header-wrap img {
-  height: 48px;
+  height: 42px;
+  width: auto;
+  max-height: 42px;
 }
 
 .header-title {
@@ -154,4 +156,5 @@ header nav {
     font-size: 18px;
   }
 }
+
 
