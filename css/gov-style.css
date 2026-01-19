@@ -1,16 +1,21 @@
 /* ==============================
-   Jansampark MP – Govt UI Theme
+   CSS VARIABLES (Govt Theme)
    ============================== */
-
 :root {
   --mp-blue: #0b3c5d;
-  --mp-saffron: #ff9933;
-  --mp-green: #138808;
-  --light-bg: #f4f6f9;
-  --text-dark: #2c2c2c;
+  --light-bg: #f4f6f8;
+  --card-bg: #ffffff;
+  --text-dark: #222222;
+  --accent: #f28c28;
 }
 
-/* Base */
+/* ==============================
+   BASE RESET
+   ============================== */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -19,108 +24,19 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+/* ==============================
+   HEADER (Sticky Govt Style)
+   ============================== */
 header {
   background-color: var(--mp-blue);
   color: #ffffff;
   padding: 12px 28px;
-
   position: sticky;
   top: 0;
   z-index: 999;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 22px;
-  font-weight: 600;
-}
-
-/* Navigation */
-nav {
-  margin-top: 8px;
-}
-
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  margin-right: 18px;
-  font-size: 15px;
-  font-weight: 500;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Layout */
-.container {
-  max-width: 1100px;
-  margin: 30px auto;
-  padding: 0 20px;
-}
-/* Card */
-.card {
-  background-color: #ffffff;
-  border-radius: 6px;
-  padding: 22px;
-  margin-bottom: 24px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.card h2 {
-  margin-top: 0;
-  font-size: 20px;
-  border-left: 5px solid var(--mp-saffron);
-  padding-left: 12px;
-}
-
-/* Lists */
-ul {
-  padding-left: 20px;
-}
-
-ul li {
-  margin-bottom: 8px;
-}
-
-/* Links */
-a {
-  color: var(--mp-blue);
-}
-
-a:hover {
-  color: var(--mp-green);
-}
-
-/* Footer */
-footer {
-  background-color: #1f2933;
-  color: #cfd8dc;
-  text-align: center;
-  padding: 14px;
-  font-size: 14px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  header {
-    padding: 14px 20px;
-  }
-
-  nav a {
-    display: inline-block;
-    margin-bottom: 8px;
-  }
-
-  .container {
-    padding: 20px;
-  }
-}
-/* ==============================
-   Professional Govt Header
-   ============================== */
-
+/* Header top row */
 .header-wrap {
   display: flex;
   align-items: center;
@@ -129,8 +45,6 @@ footer {
 
 .header-wrap img {
   height: 42px;
-  width: auto;
-  max-height: 42px;
 }
 
 .header-title {
@@ -139,43 +53,48 @@ footer {
   margin: 0;
 }
 
-/* Navigation spacing fix */
+/* Navigation */
 header nav {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .header-wrap img {
-    height: 36px;
-  }
-}
-
-
-  .header-wrap img {
-    height: 42px;
-  }
-
-  .header-title {
-    font-size: 18px;
-  }
-}
-/* ===== FINAL HERO SECTION ===== */
-
-.hero {
-  background: #0b3c5d !important;
-  display: block;
-  width: 100%;
-}
-
-.hero * {
+header nav a {
   color: #ffffff;
+  text-decoration: none;
+  margin-right: 16px;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Language toggle */
+header nav span {
+  float: right;
+  font-weight: 600;
+}
+
+header nav span a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 6px;
+}
+
+/* ==============================
+   HERO SECTION
+   ============================== */
+.hero {
+  background-color: var(--mp-blue);
+  padding: 40px 20px 30px;
+  text-align: center;
+  color: #ffffff;
+  width: 100%;
 }
 
 .hero-content {
   max-width: 900px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .hero-content img {
@@ -194,19 +113,96 @@ header nav {
   font-size: 16px;
   opacity: 0.9;
 }
-/* ===== HERO FORCE FIX ===== */
-.hero {
-  background-color: #0b3c5d !important;
-  width: 100%;
+
+/* ==============================
+   PAGE CONTAINER
+   ============================== */
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
 }
 
-.hero-content,
-.hero-content h2,
-.hero-content p {
+/* ==============================
+   CARDS
+   ============================== */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 6px;
+  padding: 22px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 12px;
+}
+
+.card h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 4px;
+  height: 80%;
+  background-color: var(--accent);
+  border-radius: 2px;
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+/* ==============================
+   LANGUAGE SUPPORT
+   ============================== */
+.lang-hi {
+  display: none;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+footer {
+  background-color: #1f2a33;
   color: #ffffff;
+  text-align: center;
+  padding: 14px 10px;
+  font-size: 14px;
 }
 
+/* ==============================
+   RESPONSIVE
+   ============================== */
+@media (max-width: 768px) {
+  .header-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
+  .header-title {
+    font-size: 18px;
+  }
 
+  header nav a {
+    display: inline-block;
+    margin-bottom: 6px;
+  }
 
+  header nav span {
+    float: none;
+    display: block;
+    margin-top: 6px;
+  }
 
+  .hero-content img {
+    height: 65px;
+  }
+
+  .hero-content h2 {
+    font-size: 22px;
+  }
+}
