@@ -175,6 +175,7 @@ header nav {
 .hero-content {
   max-width: 900px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .hero-content img {
@@ -204,6 +205,7 @@ header nav {
 .hero-content p {
   color: #ffffff;
 }
+
 
 
 
